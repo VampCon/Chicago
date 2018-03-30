@@ -11,6 +11,15 @@
         width: 100%;
     }
 
+    #footer {
+        background-image:url('/img/vampCon.png');
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: top;
+        height: 100px;
+        width: 100%;
+    }
+
     #tblLogo {
         width: 100%;
         height: 100%;
@@ -216,18 +225,6 @@
 					</div>
 				</div>
 
-				<div class="row align-items-center mt-5">
-					<div class="col-12 col-md-6">
-						<h2>Don't miss our article</h2>
-						<p class="text-muted">Just enter your email then we will send an email about the latest articles</p>
-					</div>
-					<div class="col-12 col-md-6">
-						<form class="subscribe" action="#">
-							<input type="email" name="email" class="form-control" placeholder="Your email">
-							<button class="btn btn-primary">Subscribe</button>
-						</form>
-					</div>
-				</div>
 			</div>
 		</section>
 
@@ -276,14 +273,10 @@
 		</section>
 
 		<footer>
-			<div class="container">
-				<figure>
-					<img src="img/logo-light.png" alt="Logo">
-				</figure>
-				<p>
+			<div class="container" id="footer">
+				<p style="left: 0px; right: 0px; margin-top: -40px; position: absolute;">
 					Copyright &copy; 2018 VampCon
-				</p>
-				<p>
+                    <br />
 					Made with <i class="ion-heart"></i> By VampCon
 				</p>
 			</div>
