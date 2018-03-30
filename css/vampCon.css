@@ -1,6 +1,7 @@
 /*reset*/
 html, body {
 	height: 100% !important;
+    background: black !important;
 }
 
 .main-loading {
@@ -243,7 +244,7 @@ html, body {
 
 /*hero*/
 .hero {
-	height: 100%;
+	height: 500px;
 	color: #fff;
 	position: relative;
 }

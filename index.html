@@ -1,4 +1,24 @@
 ﻿<!DOCTYPE html>
+
+<style type="text/css">
+    
+    #logo {
+        background-image:url('/img/vampCon2.jpg');
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: top;
+        height: 500px;
+        width: 100%;
+    }
+
+    #tblLogo {
+        width: 100%;
+        height: 100%;
+        border: solid 1px red;
+    }
+
+</style>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -14,106 +34,100 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg main-navbar">
-			<div class="container-fluid">			
-			  <a class="navbar-brand" href="#" style="display: none;">
-			  	<img src="img/logo-light.png" alt="Logo">
-			  </a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon">
-			    	<i class="ion-navicon"></i>
-			    </span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarNav">
-				  <div class="mr-auto"></div>
-			    <ul class="navbar-nav">
-			      <li class="nav-item active">
-			        <a class="nav-link smooth-link" href="#hero">Home</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link smooth-link" href="#features">VampCon Features</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link smooth-link" href="#blog">Blog</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link smooth-link" href="#project">Project</a>
-			      </li>
-			    </ul>
-			    <form class="form-inline">
-				    <a href="#contact" class="btn smooth-link align-middle btn-primary">Need Help?</a>
-			    </form>
-			  </div>
-		  </div>
-		</nav>
 
+        <nav class="navbar navbar-expand-lg main-navbar" style="z-index: 10;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" style="display: none;">
+                    <img src="img/logo-light.png" style="width: 100%;" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="ion-navicon"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link smooth-link" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smooth-link" href="#features">VampCon Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smooth-link" href="#blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link smooth-link" href="#project">Project</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                        <a href="#contact" class="btn smooth-link align-middle btn-primary">Need Help?</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
 
-        
-        <img style="margin: auto;" src="img/vampCon2.jpg" />
+        <h1><span class="bold" style="white-space: nowrap;">VampCon Rises.</span><br /><span class="bold" style="white-space: nowrap;">Chicago 2019</span></h1>
 
-		<section class="hero bg-overlay" id="hero" data-bg="img/hero.jpg">
+		<section class="hero bg-overlay" id="hero">
 			<div class="text py-5">
-				<p class="lead" style="whitespace: nowrap;">On reflection, vampires aren't that scary.</p>
-				<h1><span class="bold">VampCon</span> Rises.<br />Chicago<br /><span class="bold">2019</span>.</h1>
-				<div class="cta">
-					<a href="#features" class="btn btn-primary smooth-link">Get Started</a>
-					<div class="link">						
-						<a href="#">Interested? We are always looking for new blood.</a>
-					</div>
-				</div>
+                <div id="logo">
+                    <table id="tblLogo"><tr><td></td></tr></table>
+                </div>
 			</div>
 		</section>
 
-		<section class="padding" id="features">
-			<div class="container">
-				<div class="row">
-					<div class="col-12 col-md-4 col-sm-12">
-						<div class="list-item">
-							<div class="icon">
-								<i class="ion-code"></i>
-							</div>
-							<div class="desc">
-								<h2>Programs and Panels</h2>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
-								</p>
-								<a href="#" class="more">Learn More</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4 col-sm-12">
-						<div class="list-item">
-							<div class="icon">
-								<i class="ion-social-github"></i>
-							</div>
-							<div class="desc">
-								<h2>COstume and Roll Play</h2>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
-								</p>
-								<a href="#" class="more">Learn More</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-4 col-sm-12">
-						<div class="list-item no-spacing">
-							<div class="icon">
-								<i class="ion-paintbrush"></i>
-							</div>
-							<div class="desc">
-								<h2>Unique Shops</h2>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
-								</p>
-								<a href="#" class="more">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<section class="padding" id="features" style="padding-top: 150px; padding-bottom: 50px; background-color: white;">
+            <div class="container" style="border: 1px white !important;">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-sm-12">
+                        <div class="list-item">
+                            <div class="icon">
+                                <i class="ion-code"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>Programs and Panels</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore.
+                                </p>
+                                <a href="#" class="more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-sm-12">
+                        <div class="list-item">
+                            <div class="icon">
+                                <i class="ion-social-github"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>COstume and Roll Play</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore.
+                                </p>
+                                <a href="#" class="more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-sm-12">
+                        <div class="list-item no-spacing">
+                            <div class="icon">
+                                <i class="ion-paintbrush"></i>
+                            </div>
+                            <div class="desc">
+                                <h2>Unique Shops</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore.
+                                </p>
+                                <a href="#" class="more">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</section>
 
 		<section class="padding bg-grey" id="blog">
