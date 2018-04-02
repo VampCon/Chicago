@@ -1,23 +1,23 @@
 ﻿<!DOCTYPE html>
 
 <style type="text/css">
-
     #tblLogo {
-        height: 500px;
+        height: 375px;
         width: 100%;
         color: white;
         text-align: center;
     }
 
     #tblLogo {
+        margin: auto;
         width: 100%;
         height: 100%;
     }
 
     #footer {
-        background-image:url('/img/vampCon.png');
-        background-repeat:no-repeat;
-        background-size:contain;
+        background-image: url('/img/vampCon.png');
+        background-repeat: no-repeat;
+        background-size: contain;
         background-position: top;
         height: 100px;
         width: 100%;
@@ -27,150 +27,163 @@
     #tdLogo {
         padding: 50px 10px 15px 10px;
         letter-spacing: 1px;
-        font-size: 2.5vw;
+        font-size: 1.9vw;
     }
 
-    #tdLogo h4 {
-        padding: 15px;
-        font-size: 3.5vw;
-    }
-
+        #tdLogo h4 {
+            padding: 15px;
+            font-size: 2.4vw;
+        }
 </style>
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="author" content="VampCon">
-		<meta name="keyword" content="VampCon, template, html5, css3, bootstrap4">
-		<meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
-		<title>VampCon</title>
-		<link rel="stylesheet" href="ionicons/css/ionicons.min.css">
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
-        <link rel="stylesheet" href="css/vampCon.css">
-	</head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="VampCon">
+    <meta name="keyword" content="VampCon, template, html5, css3, bootstrap4">
+    <meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
+    <title>VampCon</title>
+    <link rel="stylesheet" href="ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/vampCon.css">
 
-	<body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116761430-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <div style="position: absolute; color: red; font-size: 24px; top: 0px; left: 10px;">&bull;</div>
+        gtag('config', 'UA-116761430-1');
+    </script>
 
-		<section id="hero">
+</head>
 
-            <table id="tblLogo">
-                <tr>
-                    <td id="tdLogo">
-                        <div>
-                            <img style="width: 100%;" src='/img/vampCon.png'/>
-                        </div>
-                        <h4>
-                            Chicago's premier vampire con celebrating all things vampire!
-                        </h4>
-                            instagram.com/vampConChicago &bull; facebook.com/vampConChicago &bull; twitter.com/vampConChicago
-                        <h4>
-                            vampConChicago.com
-                        </h4>
-                    </td>
-                </tr>
-            </table>
-		</section>
+<body>
 
 
-        <section class="padding bg-grey" id="contact">
-            <div class="container">
-                <div class="panel panel-default" style="text-align: left; font: 10px;">
-                        VIP CANDLEPIN BOWLING
-                        <br />
-                        w/Nicholas Brendon - Rosemont, IL 
-                        <br />
-                        <br />
-                        Sponsored by Vampcon.
-                        <br />
-                        <br />
-                        &bull; VIP Ticket includes entry to the karaoke party with Nicholas, an autograph, and a photograph on your phone or personal camera.
-                        <br />
-                        &bull; Bring a copy of your order confirmation for entry into the event.
-                        <br />
-                        &bull; Refunds for event cancellation only.
-                        <br />
-                        <br />
-                        Date:
-                        <br />
-                        Friday April 6th, 2018
-                        <br />
-                        <br />
-                        Time:
-                        <br />
-                        6:30 pm - 9:30 pm  Central Time
-                        <br />
-                        <br />
-                        Location:
-                        <br />
-                        Kings Lanes
-                        <br />
-                        5505 Park Pl
-                        <br />
-                        Rosemont, IL 60018
-                        <br />
-                        <br />
-                        Tickets $100.00
+    <section id="hero">
 
-
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="padding-top: 20px;">
-
-                            <!-- Identify your business so that you can collect the payments. -->
-                            <input type="hidden" name="business" value="chdavis@theocc.com">
-
-                            <!-- Specify a Donate button. -->
-                            <input type="hidden" name="cmd" value="_donations">
-
-                            <!-- Specify details about the contribution -->
-                            <input type="hidden" name="item_name" value="VIP CANDLEPIN BOWLING">
-                            <input type="hidden" name="item_number" value="Friday April 6th, 2018">
-                            <input type="hidden" name="currency_code" value="USD">
-                            <input type="hidden" name="amount" value="100.00">
-
-                            <!-- Display the payment button. -->
-                            <input type="image" name="submit"
-                                   src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-                                   alt="Donate">
-                            <img alt="" width="1" height="1"
-                                 src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-                        </form>
+        <table id="tblLogo">
+            <tr>
+                <td id="tdLogo">
+                    <div>
+                        <!--
+                                                    <img style="width: 100%;" src='/img/vampCon.png'/>
+                        -->
+                        <img style="width: 100%;" src="/img/promoLogo.png" />
                     </div>
-                </div>
+                    <h4>
+                        Chicago's premier vampire con celebrating all things vampire!
+                    </h4>
+                    instagram.com/vampConChicago &bull;&nbsp;facebook.com/vampConChicago &bull;&nbsp;twitter.com/vampConChicago
+                    <h4>
+                        vampConChicago.com
+                    </h4>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+
+    <section class="padding bg-grey" id="contact" style="padding-top: 20px;">
+        <div class="container">
+            <div class="panel panel-default" style="text-align: left; font: 10px;">
+                VIP CANDLEPIN BOWLING
+                <br />
+                w/Nicholas Brendon - Rosemont, IL
+                <br />
+                <br />
+                Sponsored by Vampcon.
+                <br />
+                <br />
+                <ul>
+                    <li>VIP Ticket includes entry to the karaoke party with Nicholas, an autograph, and a photograph on your phone or personal camera.</li>
+                    <li>Bring a copy of your order confirmation for entry into the event.</li>
+                    <li>Refunds for event cancellation only.</li>
+                </ul>
+                Date:
+                <br />
+                Friday April 6th, 2018
+                <br />
+                <br />
+                Time:
+                <br />
+                6:30 pm - 9:30 pm  Central Time
+                <br />
+                <br />
+                Location:
+                <br />
+                Kings Lanes
+                <br />
+                5505 Park Pl
+                <br />
+                Rosemont, IL 60018
+                <br />
+                <br />
+                Tickets $100.00
+
+
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                    <!-- Identify your business so that you can collect the payments. -->
+                    <input type="hidden" name="business" value="chdavis@theocc.com">
+
+                    <!-- Specify a Buy Now button. -->
+                    <input type="hidden" name="cmd" value="_xclick">
+
+                    <!-- Specify details about the item that buyers will purchase. -->
+                    <input type="hidden" name="item_name" value="VIP CANDLEPIN BOWLING">
+                    <input type="hidden" name="item_number" value="Friday April 6th, 2018">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="amount" value="100.00">
+
+                    <!-- Display the payment button. -->
+                    <input type="image" name="submit" border="0"
+                           src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                           alt="Buy Now">
+                    <img alt="" border="0" width="1" height="1"
+                         src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+
+                </form>
+
             </div>
-        </section>
+        </div>
+    </section>
 
+    <hr />
 
-		<section class="padding bg-grey" id="contact">
-			<div class="container">
-				<h2 class="section-title text-center">Contact Us</h2>
-				<p class="section-lead text-center text-muted">Send us your inquiry, we will help you and reply as soon as possible</p>
-				<div class="col-12 col-md-5" style="margin: auto;">
-					<p class="contact-text">Got a question?<br />Have an Idea?<br />Send it our way.</p>
-					<ul class="contact-icon">
-						<li><i class="ion ion-ios-email"></i> <div>vampConChicago@gmail.com</div></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<footer>
-			<div class="container" id="footer">
-				<p style="left: 0px; right: 0px; margin-top: -40px; position: absolute;">
-					Copyright &copy; 2018 VampCon
-                    <br />
-					Made with <i class="ion-heart"></i> By VampCon
-				</p>
+    <section class="padding bg-grey" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <p class="section-lead text-center text-muted">Send us your inquiry, we will help you and reply as soon as possible</p>
+            <div class="col-12 col-md-5" style="margin: auto;">
+                <p class="contact-text">Got a question?<br />Have an Idea?<br />Send it our way.</p>
+                <ul class="contact-icon">
+                    <li><i class="ion ion-ios-email"></i> <div>vampConChicago@gmail.com</div></li>
+                </ul>
             </div>
-		</footer>
+        </div>
+    </section>
 
-		<script src="/js/jquery.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-		<script src="/bootstrap/js/bootstrap.min.js"></script>
-		<script src="/js/jquery.easeScroll.js"></script>
-		<script src="/sweetalert/dist/sweetalert.min.js"></script>
-		<script src="/js/stisla.js"></script>
-	</body>
+    <footer>
+        <div class="container" id="footer">
+            <p style="left: 0px; right: 0px; margin-top: -40px; position: absolute;">
+                Copyright &copy; 2018 VampCon
+                <br />
+                Made with <i class="ion-heart"></i> By VampCon
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.easeScroll.js"></script>
+    <script src="/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/stisla.js"></script>
+</body>
 </html>
