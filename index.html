@@ -26,9 +26,10 @@
 
 
     #tdLogo {
-        padding: 50px 10px 15px 10px;
+        padding: 10px;
         letter-spacing: 1px;
         font-size: 1.9vw;
+        white-space: normal;
     }
 
     #tdLogo h4 {
@@ -36,6 +37,13 @@
         font-size: 2.4vw;
     }
 
+    #tdLogo span {
+        max-width: 80%;
+        margin: auto;
+        padding: 15px;
+        font-size: 1.5vw;
+        white-space: nowrap;
+    }
 </style>
 
 <html lang="en">
@@ -72,15 +80,12 @@
                 <tr>
                     <td id="tdLogo">
                         <div>
-<!--
-                            <img style="width: 100%;" src='/img/vampCon.png'/>
--->
-                            <img style="width: 100%;" src="/img/promoLogo3.png" />
+                            <img style="width: 80%; margin: auto;" src='/img/vampCon.png'/>
                         </div>
-                        <h4>
+                        <h4 style="padding: 0px 40px 0px 40px;">
                             Chicago's premier vampire con celebrating all things vampire!
                         </h4>
-                            instagram.com/vampConChicago &bull;&nbsp;facebook.com/vampConChicago &bull;&nbsp;twitter.com/vampConChicago
+                        <span>instagram.com/vampConChicago &bull;&nbsp;facebook.com/vampConChicago &bull;&nbsp;twitter.com/vampConChicago</span>
                         <h4>
                             vampConChicago.com
                         </h4>
@@ -94,64 +99,43 @@
         <section class="padding bg-grey" id="contact" style="padding-top: 20px;">
             <div class="container">
                 <div class="panel panel-default" style="text-align: left; font: 10px;">
-                    VIP CANDLEPIN BOWLING
-                    <br />
-                    w/Nicholas Brendon - Rosemont, IL
-                    <br />
-                    <br />
-                    Sponsored by Vampcon.
-                    <br />
-                    <br />
-                    <ul>
-                        <li>VIP Ticket includes entry to the karaoke party with Nicholas, an autograph, and a photograph on your phone or personal camera.</li>
-                        <li>Bring a copy of your order confirmation for entry into the event.</li>
-                        <li>Refunds for event cancellation only.</li>
-                    </ul>
-                    Date:
-                    <br />
-                    Friday April 6th, 2018
-                    <br />
-                    <br />
-                    Time:
-                    <br />
-                    6:30 pm - 9:30 pm  Central Time
-                    <br />
-                    <br />
-                    Location:
-                    <br />
-                    Kings Lanes
-                    <br />
-                    5505 Park Pl
-                    <br />
-                    Rosemont, IL 60018
-                    <br />
-                    <br />
-                    Tickets $100.00
+
+                    <table style="margin: auto;">
+                        <tr>
+                            <td style="text-align: center;">
+                                Eye Catching Vamp Ware.
+                                <br />
+                                My Hoodie: Size-M
+                                <br />
+                                $50.00
 
 
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
-                        <!-- Identify your business so that you can collect the payments. -->
-                        <input type="hidden" name="business" value="chdavis@theocc.com">
+                                    <!-- Identify your business so that you can collect the payments. -->
+                                    <input type="hidden" name="business" value="chdavis@theocc.com">
 
-                        <!-- Specify a Buy Now button. -->
-                        <input type="hidden" name="cmd" value="_xclick">
+                                    <!-- Specify a Buy Now button. -->
+                                    <input type="hidden" name="cmd" value="_xclick">
 
-                        <!-- Specify details about the item that buyers will purchase. -->
-                        <input type="hidden" name="item_name" value="VIP CANDLEPIN BOWLING">
-                        <input type="hidden" name="item_number" value="Friday April 6th, 2018">
-                        <input type="hidden" name="currency_code" value="USD">
-                        <input type="hidden" name="amount" value="100.00">
+                                    <!-- Specify details about the item that buyers will purchase. -->
+                                    <input type="hidden" name="item_name" value="myHoodies">
+                                    <input type="hidden" name="item_number" value="Size Med">
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="hidden" name="amount" value="50.00">
 
-                        <!-- Display the payment button. -->
-                        <input type="image" name="submit" border="0"
-                               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
-                               alt="Buy Now">
-                        <img alt="" border="0" width="1" height="1"
-                             src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+                                    <!-- Display the payment button. -->
+                                    <input type="image" name="submit" border="0"
+                                           src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif"
+                                           alt="Buy Now">
+                                    <img alt="" border="0" width="1" height="1"
+                                         src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
 
-                    </form>
+                                </form>
 
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </section>
