@@ -105,11 +105,8 @@
                             <td style="text-align: center;">
                                 Eye Catching Vamp Ware.
                                 <br />
-                                My Hoodie: Size-M
+                                My Hoodie: 
                                 <br />
-                                $50.00
-
-
                                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 
                                     <!-- Identify your business so that you can collect the payments. -->
@@ -120,9 +117,41 @@
 
                                     <!-- Specify details about the item that buyers will purchase. -->
                                     <input type="hidden" name="item_name" value="myHoodies">
-                                    <input type="hidden" name="item_number" value="Size Med">
                                     <input type="hidden" name="currency_code" value="USD">
-                                    <input type="hidden" name="amount" value="50.00">
+
+                                    <!-- Provide a drop-down menu option field. -->
+                                    <div class="input-group" style="margin: 15px auto;">
+                                        <span style="width: 75px;" for="os0" class="input-group-addon">Color</span>
+                                        <input type="hidden" name="on0" value="Color">
+                                        <select class="form-control" name="os0" id="os0">
+                                            <option value="Standard">Blue</option>
+                                            <option value="Collapsible">Grey</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Provide a drop-down menu option field with prices. -->
+                                    <div class="input-group" style="margin: 15px auto;">
+                                        <span style="width: 75px;" for="os1" class="input-group-addon">Size</span>
+                                        <input type="hidden" name="on1" value="Size">
+                                        <select class="form-control" name="os1" id="os1">
+                                            <option value="Med">Med - $35.00 USD</option>
+                                            <option value="Large">Large - $35.0 USD</option>
+                                            <option value="X-Large">X-Large - $45.00 USD</option>
+                                            <option value="XX-Large">XX-Large- $45.00 USD</option>
+                                        </select>
+                                    </div>
+
+
+                                    <!-- Specify the price that PayPal uses for each option. -->
+                                    <input type="hidden" name="option_index" value="1">
+                                    <input type="hidden" name="option_select0" value="Med">
+                                    <input type="hidden" name="option_amount0" value="35.00">
+                                    <input type="hidden" name="option_select1" value="Large">
+                                    <input type="hidden" name="option_amount1" value="35.00">
+                                    <input type="hidden" name="option_select2" value="X-Large">
+                                    <input type="hidden" name="option_amount2" value="45.00">
+                                    <input type="hidden" name="option_select2" value="XX-Large">
+                                    <input type="hidden" name="option_amount2" value="45.00">
 
                                     <!-- Display the payment button. -->
                                     <input type="image" name="submit" border="0"
