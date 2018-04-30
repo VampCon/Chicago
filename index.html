@@ -1,60 +1,5 @@
 ﻿<!DOCTYPE html>
 
-<style type="text/css">
-
-    button {
-        margin:20px;
-    }
-
-    a.hover {
-        text-decoration: none;
-        text-decoration-style: none;
-    } 
-
-    #tblLogo {
-        height: 375px;
-        width: 100%;
-        color: white;
-        text-align: center;
-    }
-
-    #tblLogo {
-        margin: auto;
-        width: 100%;
-        height: 100%;
-    }
-
-    #footer {
-        background-image:url('/img/vampCon.png');
-        background-repeat:no-repeat;
-        background-size:contain;
-        background-position: top;
-        height: 100px;
-        width: 100%;
-    }
-
-
-    #tdLogo {
-        padding: 10px;
-        letter-spacing: 1px;
-        font-size: 1.9vw;
-        white-space: normal;
-    }
-
-    #tdLogo h4 {
-        padding: 15px;
-        font-size: 2.4vw;
-    }
-
-    #tdLogo span {
-        max-width: 80%;
-        margin: auto;
-        padding: 15px;
-        font-size: 1.5vw;
-        white-space: nowrap;
-    }
-</style>
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -78,6 +23,102 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-116761430-1');
+        </script>
+
+        <style type="text/css">
+            button {
+                margin: 20px;
+            }
+
+            button:hover {
+               cursor: pointer;
+               border: solid 1px #337ab7 !important;
+            }
+
+            button {
+               border: solid 1px silver !important;
+            }
+
+            #tblLogo {
+                height: 375px;
+                width: 100%;
+                color: white;
+                text-align: center;
+            }
+
+            #tblLogo {
+                margin: auto;
+                width: 100%;
+                height: 100%;
+            }
+
+            #footer {
+                background-image: url('/img/vampCon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+                height: 100px;
+                width: 100%;
+            }
+
+
+            #tdLogo {
+                padding: 10px;
+                letter-spacing: 1px;
+                font-size: 1.9vw;
+                white-space: normal;
+            }
+
+            #tdLogo h4 {
+                padding: 15px;
+                font-size: 2.4vw;
+            }
+
+            #tdLogo span {
+                max-width: 80%;
+                margin: auto;
+                padding: 15px;
+                font-size: 1.5vw;
+                white-space: nowrap;
+            }
+
+            .indent td {
+                padding-left: 1.5em;
+                text-indent:-1.5em;
+            }
+        </style>
+
+        <script type="text/javascript">
+
+            var boothSelection = 1
+            function BoothPlease(i)
+            {
+                if(!i) { i = boothSelection }
+                boothSelection = i
+                
+                var siteFee = 270
+                var price = 150
+                var AdditionalBadgeFee = 0
+                var boothDesc = "Standard booth"
+                if (i == 2) { price = 200; boothDesc = "Corner booth"; }
+
+                var Badges = document.getElementById('selAdditionalBadges').selectedIndex
+                AdditionalBadgeFee = Badges *25
+                
+                document.getElementById('tdAdditionalBadges').innerHTML = ""
+                if (Badges > 0) {
+                    boothDesc += ", with " + Badges + " aditional badge"
+                    document.getElementById('tdAdditionalBadges').innerHTML = "$"+ AdditionalBadgeFee + ".00"
+                }
+                if (Badges > 1) { boothDesc += "s" }
+                boothDesc += ".";
+
+                var total = siteFee + price + AdditionalBadgeFee
+                document.getElementById('tdTotal').innerHTML = "$"+ total+ ".00"
+                document.getElementById('aBoothPlease').href = "https://www.paypal.com/cgi-bin/webscr?&cmd=_xclick&business=chdavis@theocc.com&currency_code=USD&amount=" + total + "&item_name=" + boothDesc
+
+            }
+
         </script>
 
 	</head>
@@ -104,13 +145,14 @@
                 </tr>
             </table>
 
+
 		</section>
 
 
 
         <section class="padding bg-grey" id="contact" style="padding-top: 20px;">
 
-            <ul class="nav nav-pills align-middle" style="margin: auto; display: table;">
+            <ul class="nav nav-pills" style="margin: auto; width: 290px;">
                 <li class="active" style="display: inline;">
                     <a data-toggle="pill" href="#idSwag" >
                         <button class="btn btn-default" style="margin: 10px;">Swag</button>
@@ -292,17 +334,17 @@
                     
                 </div>
                 <div id="idFans" class="tab-pane fade">
-                    <h3>Registration and Activities</h3>
+                    <h3 style="margin: 20px;">Registration and Activities</h3>
                     <div class="container">
                         <!-- All things registration -->
-                        <div class="panel panel-default" style="text-align: left; font: 10px;">
+                        <div class="panel panel-default" style="text-align: left; font: 10px; padding-left: 40px;">
                             Registration information pending
                         </div>
                         <!-- / All things registration -->
                     </div>
                 </div>
                 <div id="idHucksters" class="tab-pane fade">
-                    <h3 style="margin-left: 20px;">Artists and Vendors</h3>
+                    <h3 style="margin: 20px;">Artists and Vendors</h3>
                     <div class="container">
                         <!-- All things Artists and Vendors-->
                         <div class="panel panel-default" style="text-align: left; font: 10px; padding-left: 40px;">
@@ -315,19 +357,42 @@
                             <table style="margin: auto;">
                                 <caption style="caption-side: top;">Sign Me Up !</caption>
                                 <tr>
-                                    <td><input type="radio" name="inpSignMeUp" /></td>
+                                    <td><input type="radio" name="inpSignMeUp" checked="checked" onclick="BoothPlease(1)" /></td>
                                     <td style="padding-left: 10px;">One Standard booth please.</td>
+                                    <td style="padding-left: 10px; text-align: right;">$420.00</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="inpSignMeUp" /></td>
+                                    <td><input type="radio" name="inpSignMeUp" onclick="BoothPlease(2)" /></td>
                                     <td style="padding-left: 10px;"> One Corner booth please.</td>
+                                    <td style="padding-left: 10px; text-align: right;">$470.00</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 10px 20px;" onchange="BoothPlease()">
+                                        <select class="form-control" id="selAdditionalBadges">
+                                            <option value="0">Additional Badges?</option>
+                                            <option value="1">1 Additional Badge</option>
+                                            <option value="2">2 Additional Badges</option>
+                                            <option value="3">3 Additional Badges</option>
+                                            <option value="4">4 Additional Badges</option>
+                                        </select>
+
+                                    </td>
+                                    <td style="padding-left: 10px; text-align: right;" id="tdAdditionalBadges">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td style="padding: 10px 20px; text-align: center" >
+                                        <a id="aBoothPlease" href="https://www.paypal.com/cgi-bin/webscr?&amp;cmd=_xclick&amp;business=chdavis@theocc.com&amp;currency_code=USD&amp;amount=175&amp;item_name=Standard booth." target="_blank"><img src="http://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"></a>
+                                    </td>
+                                    <td style="padding-left: 10px; text-align: right;" id="tdTotal">$420.00</td>
                                 </tr>
                             </table>
 
                             
                             <hr />
                             <h4>Standard Booth- $150</h4>
-                            <table>
+                            <table class="indent">
                                 <caption style="caption-side: top;">Includes:</caption>
                                 <thead></thead>
                                 <tbody>
@@ -351,10 +416,9 @@
                             </table>
                                 
                                 
-                                
                             <hr />
                             <h4>Corner Booth - $200</h4>
-                            <table>
+                            <table class="indent">
                                 <caption style="caption-side: top;">Includes:</caption>
                                 <tr>
                                     <td>
@@ -364,31 +428,38 @@
                                 <tr>
                                     <td>
                                         •	10 by 10 space & a 6 FT table
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         •	8 FT tall pipe & drape backdrop with 3 FT siding
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         •	Black table cloth
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         •	2 chairs
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Electricity= +$270 (Total for Sat and Sun)
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Please let me know if you have questions.
                                     </td>
                                 </tr>
                             </table>
+
+
+                            <hr />
+                            <table class="indent">
+                                <caption style="caption-side: top;">Site fees cover</caption>
+                                <tr>
+                                    <td>
+                                        Electricity= +$270 (Total for Sat and Sun)
+                                    </td>
+                                </tr>
+                            </table>
+                        
                         </div>
-                        <hr />
+                        
                         <!-- /All things Artists and Vendors-->
 
                     </div>
@@ -426,5 +497,6 @@
 		<script src="/js/jquery.easeScroll.js"></script>
 		<script src="/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="/js/stisla.js"></script>
+
 	</body>
 </html>
