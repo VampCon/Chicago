@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="author" content="VampCon">
 		<meta name="keyword" content="VampCon, template, html5, css3, bootstrap4">
-		<meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
+		<meta name="description" content="VampCon Chicago">
 		<title>VampCon</title>
 		<link rel="stylesheet" href="/ionicons/css/ionicons.min.css">
 		<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
@@ -107,9 +107,9 @@
                 document.getElementById('tdElecticPrice').innerHTML = ''
 
                 if (document.getElementById('inpWithElectic').checked) {
-                    electic = 270
+                    electic = 160
                     boothDesc = boothDesc + " with electricity";
-                    document.getElementById('tdElecticPrice').innerHTML = 'Yes: 270'
+                    document.getElementById('tdElecticPrice').innerHTML = 'Yes: $160.00'
                 }
 
                 var Badges = document.getElementById('selAdditionalBadges').selectedIndex
@@ -375,7 +375,7 @@
                                 <tr>
                                     <td><input type="radio" name="inpSignMeUp" checked="checked" onclick="BoothPlease(1)" /></td>
                                     <td style="padding-left: 10px;">One Standard booth please.</td>
-                                    <td style="padding-left: 10px; text-align: right;">$150.00</td>
+                                    <td style="padding-left: 10px; text-align: right; width: 100px;">$150.00</td>
                                 </tr>
                                 <tr>
                                     <td><input type="radio" name="inpSignMeUp" onclick="BoothPlease(2)" /></td>
@@ -476,7 +476,7 @@
                                 <caption style="caption-side: top;">Site fees cover</caption>
                                 <tr>
                                     <td>
-                                        Electricity= +$270 (Total for Sat and Sun)
+                                        Electricity= +$160 (Total for Sat and Sun)
                                     </td>
                                 </tr>
                             </table>
