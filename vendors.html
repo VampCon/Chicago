@@ -16,12 +16,12 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116761430-1"></script>
+        <script src="/js/md5.js"></script>
 
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
-
             gtag('config', 'UA-116761430-1');
         </script>
 
@@ -97,18 +97,19 @@
                 if(!i) { i = boothSelection }
                 boothSelection = i
                 
+                var discount = 0
                 var electic = 0
                 var price = 150
                 var AdditionalBadgeFee = 0
                 var boothDesc = "Standard booth"
                 if (i == 2) { price = 200; boothDesc = "Corner booth"; }
 
-
                 document.getElementById('tdElecticPrice').innerHTML = ''
+                document.getElementById('tdPromoCode').innerHTML = ''
 
                 if (document.getElementById('inpWithElectic').checked) {
                     electic = 75
-                    boothDesc = boothDesc + " with electricity";
+                    boothDesc = boothDesc + "<br/>With electricity";
                     document.getElementById('tdElecticPrice').innerHTML = 'Yes: $75.00'
                 }
 
@@ -117,14 +118,19 @@
                 
                 document.getElementById('tdAdditionalBadges').innerHTML = ""
                 if (Badges > 0) {
-                    boothDesc = boothDesc + " and " + Badges + " aditional badge"
+                    boothDesc = boothDesc + "<br/>" + Badges + " aditional badge"
                     document.getElementById('tdAdditionalBadges').innerHTML = "$"+ AdditionalBadgeFee + ".00"
                 }
                 if (Badges > 1) { boothDesc = boothDesc + "s" }
-                boothDesc = boothDesc + ".";
 
-                var total = electic + price + AdditionalBadgeFee
-                document.getElementById('tdTotal').innerHTML = boothDesc + " $"+ total+ ".00"
+                if ("99a953061c00bcde032c87119dae218d" == md5(document.getElementById('inpPromoCode').value)) {
+                    discount = -15
+                    document.getElementById('tdPromoCode').innerHTML = '$-15.00'
+                    boothDesc = boothDesc + "<br/>Promo Code: " + document.getElementById('inpPromoCode').value;
+                }
+
+                var total = electic + price + AdditionalBadgeFee + discount
+                document.getElementById('tdTotal').innerHTML = boothDesc + "<br/>$"+ total+ ".00"
                 document.getElementById('aBoothPlease').href = "https://www.paypal.com/cgi-bin/webscr?&cmd=_xclick&business=chris@vampconchicago.com&currency_code=USD&amount=" + total + "&item_name=" + boothDesc
 
             }
@@ -192,8 +198,13 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td style="padding: 10px 20px;" onchange="BoothPlease()">
-                                    <select class="form-control" id="selAdditionalBadges">
+                                <td style="padding: 20px;"><input type="text" style="padding-left: 10px;" placeholder="Promo Code" class="form-control" id="inpPromoCode" onchange="BoothPlease()"></td>
+                                <td style="padding-left: 10px; text-align: right;" id="tdPromoCode"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding: 0px 20px;">
+                                    <select class="form-control" id="selAdditionalBadges" onchange="BoothPlease()">
                                         <option value="0">Additional Badges?</option>
                                         <option value="1">1 Additional Badge</option>
                                         <option value="2">2 Additional Badges</option>
@@ -204,16 +215,19 @@
                                 </td>
                                 <td style="padding-left: 10px; text-align: right;" id="tdAdditionalBadges">&nbsp;</td>
                             </tr>
-                        </table>
-
-                        <table style="margin: 20px auto;">
                             <tr>
-                                <td>
+                                <td></td>
+                                <td style="text-align: center; padding-top: 30px;">
+                                    <span id="tdTotal">Standard booth.<br />$150.00 </span>
+                                    <div style="height: 10px;" ></div>
                                     <a id="aBoothPlease" href="https://www.paypal.com/cgi-bin/webscr?&amp;cmd=_xclick&amp;business=chris@vampconchicago.com&amp;currency_code=USD&amp;amount=150&amp;item_name=Standard booth." target="_blank"><img src="http://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"></a>
                                 </td>
-                                <td id="tdTotal" style="padding-left: 20px;">Standard booth. $150.00 </td>
+                                <td></td>
                             </tr>
                         </table>
+
+                            
+                        
 
 
                         <hr />
