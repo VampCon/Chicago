@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="author" content="VampCon">
+		<meta name="keyword" content="VampCon, template, html5, css3, bootstrap4">
+		<meta name="description" content="VampCon Chicago">
+		<title>VampCon</title>
+		<link rel="stylesheet" href="/ionicons/css/ionicons.min.css">
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" href="/css/vampCon.css">
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116761430-1"></script>
+        <script src="/js/md5.js"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-116761430-1');
+        </script>
+
+        <style type="text/css">
+            button {
+                margin: 20px;
+            }
+            button:hover {
+               cursor: pointer;
+               border: solid 1px #337ab7 !important;
+            }
+            button {
+               border: solid 1px silver !important;
+            }
+            #tblLogo {
+                height: 375px;
+                width: 100%;
+                color: white;
+                text-align: center;
+            }
+            #tblLogo {
+                margin: auto;
+                width: 100%;
+                height: 100%;
+            }
+            #footer {
+                background-image: url('/img/vampCon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+                height: 100px;
+                width: 100%;
+            }
+            #tdLogo {
+                padding: 10px;
+                letter-spacing: 1px;
+                font-size: 1.9vw;
+                white-space: normal;
+            }
+            #tdLogo h4 {
+                padding: 15px;
+                font-size: 2.4vw;
+            }
+            #tdLogo span {
+                max-width: 80%;
+                margin: auto;
+                padding: 15px;
+                font-size: 1.5vw;
+                white-space: nowrap;
+            }
+            .indent td {
+                padding-left: 1.5em;
+                text-indent:-1.5em;
+            }
+        </style>
+
+
+        <script type="text/javascript">
+            var boothSelection = 1
+            function BoothPlease(i)
+            {
+                if(!i) { i = boothSelection }
+                boothSelection = i
+                
+                var discount = 0
+                var electic = 0
+                var price = 150
+                var AdditionalBadgeFee = 0
+                var boothDesc = "Standard booth"
+                if (i == 2) { price = 200; boothDesc = "Corner booth"; }
+                document.getElementById('tdElecticPrice').innerHTML = ''
+                document.getElementById('tdPromoCode').innerHTML = ''
+                if (document.getElementById('inpWithElectic').checked) {
+                    electic = 75
+                    boothDesc = boothDesc + "<br/>With electricity";
+                    document.getElementById('tdElecticPrice').innerHTML = 'Yes: $75.00'
+                }
+                var Badges = document.getElementById('selAdditionalBadges').selectedIndex
+                AdditionalBadgeFee = Badges *25
+                
+                document.getElementById('tdAdditionalBadges').innerHTML = ""
+                if (Badges > 0) {
+                    boothDesc = boothDesc + "<br/>" + Badges + " aditional badge"
+                    document.getElementById('tdAdditionalBadges').innerHTML = "$"+ AdditionalBadgeFee + ".00"
+                }
+                if (Badges > 1) { boothDesc = boothDesc + "s" }
+                if ("99a953061c00bcde032c87119dae218d" == md5(document.getElementById('inpPromoCode').value)) {
+                    discount = -50
+                    document.getElementById('tdPromoCode').innerHTML = '$-50.00'
+                    boothDesc = boothDesc + "<br/>Promo Code: " + document.getElementById('inpPromoCode').value;
+                }
+                var total = electic + price + AdditionalBadgeFee + discount
+                document.getElementById('tdTotal').innerHTML = boothDesc + "<br/>$"+ total+ ".00"
+                document.getElementById('aBoothPlease').href = "https://www.paypal.com/cgi-bin/webscr?&cmd=_xclick&business=chris@vampconchicago.com&currency_code=USD&amount=" + total + "&item_name=" + boothDesc
+            }
+        </script>
+
+	</head>
+
+	<body>
+
+
+		<section id="hero">
+
+            <table id="tblLogo">
+                <tr>
+                    <td id="tdLogo">
+                        <div>
+                            <img style="width: 80%; margin: auto;" src='/img/vampCon.png'/>
+                        </div>
+                        <h4 style="padding: 0px 40px 0px 40px;">
+                            Chicago's premier vampire con celebrating all things vampire!
+                        </h4>
+                        <span>instagram.com/vampConChicago &bull;&nbsp;facebook.com/vampConChicago &bull;&nbsp;twitter.com/vampConChicago</span>
+                        <h4>
+                            vampConChicago.com
+                        </h4>
+                    </td>
+                </tr>
+            </table>
+
+
+		</section>
+
+
+
+        <section class="padding bg-grey" id="contact" style="padding-top: 20px;">
+
+            <div id="idHucksters" class="tab-pane fade in active show">
+                <h3 style="margin: 20px;">Artists and Vendors</h3>
+                <div class="container">
+                    <!-- All things Artists and Vendors-->
+                    <div class="panel panel-default" style="text-align: left; font: 10px; padding-left: 40px;">
+
+                        <h5>
+                            Welcome vendors and artistes
+                        </h5>
+
+
+                        <table style="margin: auto;">
+                            <caption style="caption-side: top;">Sign Me Up !</caption>
+                            <tr>
+                                <td><input type="radio" name="inpSignMeUp" checked="checked" onclick="BoothPlease(1)" /></td>
+                                <td style="padding-left: 10px;">One Standard booth please.</td>
+                                <td style="padding-left: 10px; text-align: right; width: 100px;">$150.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="inpSignMeUp" onclick="BoothPlease(2)" /></td>
+                                <td style="padding-left: 10px;"> One Corner booth please.</td>
+                                <td style="padding-left: 10px; text-align: right;">$200.00</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="inpWithElectic" onclick="BoothPlease()" /></td>
+                                <td style="padding-left: 10px;"> With Electricity? Y/N</td>
+                                <td style="padding-left: 10px; text-align: right;" id="tdElecticPrice"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding: 20px;"><input type="text" style="padding-left: 10px;" placeholder="Promo Code" class="form-control" id="inpPromoCode" onchange="BoothPlease()"></td>
+                                <td style="padding-left: 10px; text-align: right;" id="tdPromoCode"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding: 0px 20px;">
+                                    <select class="form-control" id="selAdditionalBadges" onchange="BoothPlease()">
+                                        <option value="0">Additional Badges?</option>
+                                        <option value="1">1 Additional Badge</option>
+                                        <option value="2">2 Additional Badges</option>
+                                        <option value="3">3 Additional Badges</option>
+                                        <option value="4">4 Additional Badges</option>
+                                    </select>
+
+                                </td>
+                                <td style="padding-left: 10px; text-align: right;" id="tdAdditionalBadges">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: center; padding-top: 30px;">
+                                    <span id="tdTotal">Standard booth.<br />$150.00 </span>
+                                    <div style="height: 10px;" ></div>
+                                    <a id="aBoothPlease" href="https://www.paypal.com/cgi-bin/webscr?&amp;cmd=_xclick&amp;business=chris@vampconchicago.com&amp;currency_code=USD&amp;amount=150&amp;item_name=Standard booth." target="_blank"><img src="http://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"></a>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                            
+                        
+
+
+                        <hr />
+                        <h4>Standard Booth- $150</h4>
+                        <table class="indent">
+                            <caption style="caption-side: top;">Includes:</caption>
+                            <thead></thead>
+                            <tbody>
+                                <tr>
+                                    <td>•	2 vendor badges (up to 4 extra badges may be purchased for $25 per badge)</td>
+                                </tr>
+                                <tr>
+                                    <td>•	10 by 10 space & a 6 FT table</td>
+                                </tr>
+                                <tr>
+                                    <td>•	8 FT tall pipe & drape backdrop with 3 FT siding</td>
+                                </tr>
+                                <tr>
+                                    <td>•	Black table cloth</td>
+                                </tr>
+                                <tr>
+                                    <td>•	2 chairs</td>
+                                </tr>
+                            </tbody>
+                            <tfoot></tfoot>
+                        </table>
+
+
+                        <hr />
+                        <h4>Corner Booth - $200</h4>
+                        <table class="indent">
+                            <caption style="caption-side: top;">Includes:</caption>
+                            <tr>
+                                <td>
+                                    •	2 vendor badges (up to 4 extra badges may be purchased for $25 per badge)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	10 by 10 space & with two 6 FT tables
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	8 FT tall pipe & drape backdrop with 3 FT siding
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	Black table cloth
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	2 chairs
+                                </td>
+                            </tr>
+                        </table>
+
+						
+						<hr />
+                        <h4>Vendor Badges</h4>
+                        <table class="indent">
+                            <caption style="caption-side: top;">About:</caption>
+                            <tr>
+                                <td>
+                                    •	Vendor badges are considered <b>General Admission</b>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	Vendor badges grant early and late access to the hall.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    •	Limit 4 extra per company
+                                </td>
+                            </tr>
+                        </table>
+						
+                        <hr />
+                        <table class="indent">
+                            <caption style="caption-side: top;">Site fees cover</caption>
+                            <tr>
+                                <td>
+                                    Electricity= +$75 (Total for Sat and Sun)
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <!-- /All things Artists and Vendors-->
+
+                </div>
+            </div>
+            
+        </section>
+
+        
+		<section class="padding bg-grey" id="contact" style="display: none;">
+			<div class="container text-center">
+				<h2 class="section-title text-center">Contact Us</h2>
+				<p class="section-lead text-center text-muted">Got a question? Have an Idea?<br />Send us an email. We will reply as soon as possible</p>
+				<div class="col-12 col-md-5" style="margin: auto;">
+					<ul class="contact-icon">
+						<li>&bull; vampConChicago@gmail.com</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container" id="footer">
+				<p style="left: 0px; right: 0px; margin-top: -40px; position: absolute;">
+					Copyright &copy; 2018 VampCon
+                    <br />
+					Made with <i class="ion-heart"></i> By VampCon
+				</p>
+			</div>
+		</footer>
+
+		<script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+		<script src="/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/jquery.easeScroll.js"></script>
+		<script src="/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="/js/stisla.js"></script>
+
+	</body>
+</html>
